@@ -7,12 +7,13 @@ import PropTypes from 'prop-types';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
-    name: '',
+    fname: '',
+    lname: '',
     email: '',
     password: ''
   });
 
-  const { name, email, password, password2 } = formData;
+  const { fname, lname, email, password, password2 } = formData;
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,7 +21,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   const onSubmit = async (e) => {
     e.preventDefault();
     
-      register({ name, email, password });
+      register({ fname, lname, email, password });
     
   };
 
@@ -33,7 +34,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       <div className="row">
     <div className="col-7" style={{}}>
     <img 
-      style={{marginTop: '15vh', marginRight: '20vw', height: '350px', width: '400px', borderRadius: '50%'}}
+      style={{marginTop: '5vh', marginRight: '20vw', height: '350px', width: '400px', borderRadius: '50%'}}
       src="https://cdn.vox-cdn.com/thumbor/xox_VT-NMs0nkZ9Wlg6lwi1S7Wg=/0x0:2000x1600/1200x800/filters:focal(840x640:1160x960)/cdn.vox-cdn.com/uploads/chorus_image/image/64147294/180420_12_28_42_5DSR2360.0.jpg"
       alt="new"
       />
@@ -42,7 +43,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     <div className="col-5">
     <div style={{margin: 'auto'}}>
     <div style={{}}>
-      <h1 className="large text-primary">Sign Up</h1>
+      <h1 className="large text-primary">Register</h1>
       <p className="lead">
          JP Morgan - Create Account
       </p>
@@ -50,13 +51,24 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         <div className="form-group">
           <input
             type="text"
-            placeholder="Name"
-            name="name"
-            value={name}
+            placeholder="First Name"
+            name="fname"
+            value={fname}
             onChange={onChange}
             className="form-control"
           />
         </div>
+        <div className="form-group">
+          <input
+            type="text"
+            placeholder="Last Name"
+            name="lname"
+            value={lname}
+            onChange={onChange}
+            className="form-control"
+          />
+        </div>
+
         <div className="form-group">
           <input
             type="email"

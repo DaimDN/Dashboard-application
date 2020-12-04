@@ -10,11 +10,36 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
   <div className="collapse navbar-collapse" id="navbarNav">
     <ul className="navbar-nav ml-auto">
     <li class="nav-item">
+                <a class="nav-link" style={{fontSize: '13px', fontWeight: '800'}} href="/">Dashboard</a>
+              </li>
+
+    <li class="nav-item">
+                <a class="nav-link" style={{fontSize: '13px', fontWeight: '800'}} href="/">Settings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style={{fontSize: '13px', fontWeight: '800'}} href="/">Commons</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style={{fontSize: '13px', fontWeight: '800'}} href="/">Graphs</a>
+              </li>
+
+
+    <li class="nav-item">
                 <a class="nav-link" href="/">
                   <i class="now-ui-icons media-2_sound-wave"></i>
                   
                     <span class="d-lg-none d-md-block">Dashboard</span>
                   
+                </a>
+              </li>
+            
+             
+              <li class="nav-item">
+                <a class="nav-link" href="#pablo">
+                 
+                  <p>
+                  <i class="now-ui-icons ui-1_zoom-bold"></i>
+                  </p>
                 </a>
               </li>
       
@@ -25,18 +50,15 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
                 src="https://avatars0.githubusercontent.com/u/17266803?s=460&u=4c801c80490fbe466e6d6a1db2c9f3759c4981e9&v=4"
                 alt="New images"
                  />
-                  
-                  
-                  
                 </a>
               </li>
+
+             
       
     </ul>
 
     
   </div>
-
-     
   </Fragment>
     
   );
@@ -62,19 +84,10 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
     </Fragment>
   );
 
-
-
-
-  const Default = (
-    <div>
-
-    </div>
-  );
-
   return (
-   
+   <div>
     <Fragment className="main-panel" id="main-panel">
-      <nav  className="navbar navbar-expand-lg   bg-primary bg-dark  navbar-absolute">
+      <nav  className="navbar navbar-expand-lg   bg-primary bg-dark">
       <a
        class="navbar-brand"
        style={{fontWeight: '900', fontSize: '17px'}}
@@ -82,21 +95,15 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
         >Dashboard</a>        
      <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
       </nav>
-      <Fragment>{isAuthenticated ? Charts : Default}</Fragment>
-      
-    
-     
       
     </Fragment>
+   
+    </div>
+    
   );
-};
-var Charts = (
-  <div class="panel-header panel-header-lg">
-  <canvas id="bigDashboardChart"></canvas>
-</div>  
-     
   
-);
+};
+
 
 
 Navbar.propTypes = {

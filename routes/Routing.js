@@ -6,7 +6,7 @@ const {login} = require('./Login');
 const util = require('./util/Auth');
 const { check, validationResult } = require('express-validator');
 const {middleware} = require('./util/Auth');
-const {auth, charts} = require('./Auth');
+const {auth, charts, profile} = require('./Auth');
 
 //@ All of the get Routes
 Router.get('/', getLanding);
@@ -14,6 +14,7 @@ Router.get('/', getLanding);
 //@ All protected Routes
 Router.get('/users', middleware , auth );
 Router.get('/charts', middleware , charts);
+Router.get('/me', middleware ,  profile);
 
 
 

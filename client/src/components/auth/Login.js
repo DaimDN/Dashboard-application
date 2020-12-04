@@ -30,7 +30,7 @@ const Login = ({ login, isAuthenticated }) => {
     <div className="row">
     <div className="col-7" style={{}}>
     <img 
-      style={{marginTop: '15vh', marginRight: '20vw', height: '350px', width: '400px', borderRadius: '50%'}}
+      style={{marginTop: '5vh', marginRight: '20vw', height: '350px', width: '400px', borderRadius: '50%'}}
       src="https://www.ledgerinsights.com/wp-content/uploads/2019/04/jpmorgan.3.jpg"
       alt="new"
       />
@@ -38,7 +38,7 @@ const Login = ({ login, isAuthenticated }) => {
 
     <div className="col-5">
     <div style={{margin: 'auto'}}>
-      <h1 className="large text-primary">Sign In</h1>
+      <h1 className="large text-primary">Login</h1>
       <p className="lead" style={{}}>
         <i style={{color: 'orange'}} /> JP Morgan - Login Panel
       </p>

@@ -1,0 +1,10 @@
+p{
+    margin-right: 40px;
+}
+
+.x:hover{
+    background-color: #F48FB1    ;
+    border-radius: 5px;
+    color: white !important;
+    text-align: center;
+}

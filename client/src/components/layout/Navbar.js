@@ -6,53 +6,98 @@ import { logout } from '../../actions/auth';
 
 const Navbar = ({ auth: { isAuthenticated }, logout }) => {
   const authLinks = (
-    <ul>
-      <li>
-        <Link to="/profiles">Developers</Link>
-      </li>
-      <li>
-        <Link to="/posts">Posts</Link>
-      </li>
-      <li>
-        <Link to="/dashboard">
-          <i className="fas fa-user" />{' '}
-          <span className="hide-sm">Dashboard</span>
-        </Link>
-      </li>
-      <li>
-        <a onClick={logout} href="#!">
-          <i className="fas fa-sign-out-alt" />{' '}
-          <span className="hide-sm">Logout</span>
-        </a>
-      </li>
+   <Fragment>
+  <div className="collapse navbar-collapse" id="navbarNav">
+    <ul className="navbar-nav ml-auto">
+    <li class="nav-item">
+                <a class="nav-link" href="/">
+                  <i class="now-ui-icons media-2_sound-wave"></i>
+                  
+                    <span class="d-lg-none d-md-block">Dashboard</span>
+                  
+                </a>
+              </li>
+      
+               <li class="nav-item">
+                <a class="nav-link active" onClick={logout} href="#!">
+                <img 
+                style={{width:'30px', borderRadius: '50%'}}
+                src="https://avatars0.githubusercontent.com/u/17266803?s=460&u=4c801c80490fbe466e6d6a1db2c9f3759c4981e9&v=4"
+                alt="New images"
+                 />
+                  
+                  
+                  
+                </a>
+              </li>
+      
     </ul>
+
+    
+  </div>
+
+     
+  </Fragment>
+    
   );
 
   const guestLinks = (
-    <ul>
-      <li>
-        <Link to="/profiles">Developers</Link>
+    <Fragment>
+       <div className="collapse navbar-collapse" id="navbarNav">
+    <ul className="navbar-nav ml-auto">
+      <li className="nav-item active">
+        <Link class="nav-link" to="/">Home</Link>
       </li>
-      <li>
-        <Link to="/register">Register</Link>
+      
+      <li className="nav-item">
+        <Link href="/login" className="nav-link" to="/Login" >
+        <i style={{fontSize: '28px'}} class="fas fa-user-circle fa-2x"></i>
+        </Link>
       </li>
-      <li>
-        <Link to="/login">Login</Link>
-      </li>
+      
+      
     </ul>
+  </div>
+  
+    </Fragment>
+  );
+
+
+
+
+  const Default = (
+    <div>
+
+    </div>
   );
 
   return (
-    <nav className="navbar bg-dark">
-      <h1>
-        <Link to="/">
-          <i className="fas fa-code" /> DevConnector
-        </Link>
-      </h1>
-      <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
-    </nav>
+   
+    <Fragment className="main-panel" id="main-panel">
+      <nav  className="navbar navbar-expand-lg   bg-primary bg-dark  navbar-absolute">
+      <a
+       class="navbar-brand"
+       style={{fontWeight: '900', fontSize: '17px'}}
+        href="/"
+        >Dashboard</a>        
+     <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
+      </nav>
+      <Fragment>{isAuthenticated ? Charts : Default}</Fragment>
+      
+    
+     
+      
+    </Fragment>
   );
 };
+var Charts = (
+  <div class="panel-header panel-header-lg">
+  <canvas id="bigDashboardChart"></canvas>
+</div>  
+     
+  
+);
+
 
 Navbar.propTypes = {
   logout: PropTypes.func.isRequired,

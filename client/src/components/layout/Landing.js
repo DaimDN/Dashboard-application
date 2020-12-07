@@ -10,7 +10,7 @@ const Landing = ({ isAuthenticated }) => {
   }
 
   return (
-    <section className='landing container'>
+    <section className='landing container w3-animate-zoom '>
       <div className='dark-overlay'>
         <div className='landing-inner'>
 

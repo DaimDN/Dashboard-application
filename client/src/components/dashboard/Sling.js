@@ -27,7 +27,7 @@ const Dashboard = ({
   return (
     <Fragment>
    
-    <div class="">
+    <div class="w3-animate-top">
     <div style={{
        fontWeight: '600',
        position: 'fixed',

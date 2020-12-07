@@ -184,7 +184,7 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
       </div>)}
 
       {auth ? (
-        <div>
+        <div >
         <div style={{
        fontWeight: '600',
        position: 'fixed',
@@ -198,7 +198,7 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
        
        }}>
 
-       <div className="container" style={{
+       <div className="container w3-animate-opacity" style={{
          position: 'absolute', 
          marginTop: '22vh',
          zIndex: '400', 

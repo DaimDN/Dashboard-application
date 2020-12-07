@@ -27,7 +27,8 @@ const Login = ({ login, isAuthenticated }) => {
   return (
     <Fragment>
 
-    <div className="row">
+    <div className="row w3-animate-zoom ">
+    
     <div className="col-6" style={{}}>
     <img 
       style={{marginTop: '5vh', marginRight: '20vw', height: '350px', width: '400px', borderRadius: '50%',

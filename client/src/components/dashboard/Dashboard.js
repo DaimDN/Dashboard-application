@@ -29,7 +29,7 @@ const Dashboard = ({
 
   return (
     <Fragment>
-    <div class="">
+    <div class="w3-animate-zoom">
     <DashSide/>
      <h2 style={{fontWeight: '700'}}>
      <div className="row">

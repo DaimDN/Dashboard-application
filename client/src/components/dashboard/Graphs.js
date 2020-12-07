@@ -30,10 +30,10 @@ const Dashboard = ({
 
   return (
     <Fragment>
-    <div class="">
+    <div class="w3-animate-opacity">
     <DashSide/>
      <h2 style={{fontWeight: '700'}}>
-     <div className="row">
+     <div className="row ">
        <div className="col-9"> <img style={{width: '40%'}} src="https://www.jpmorgan.com/content/dam/shared/logos/logos-cb-jpm.svg"
       alt="" /> </div>
       <div className="col-3">

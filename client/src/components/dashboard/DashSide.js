@@ -17,7 +17,7 @@ export default function DashSide() {
     const [Profile, setProfile] = React.useState(false);
     const [Apps, setApps] = React.useState(false);
     return (
-        <div>
+        <div className="">
         <div style={{
             position: 'fixed',
             bottom: '0',
@@ -91,7 +91,9 @@ export default function DashSide() {
         </div>
         {notification ? (
             
-            <div style={{
+            <div 
+            className="w3-animate-zoom"
+            style={{
                 position: 'fixed',
                 width: '85vw',
                 height: '30vh',
@@ -111,7 +113,9 @@ export default function DashSide() {
 
         {Apps ? (
             
-            <div style={{
+            <div
+            className="w3-animate-zoom"    
+             style={{
                 position: 'fixed',
                 width: '40vw',
                 height: '50vh',
@@ -177,7 +181,9 @@ export default function DashSide() {
 
         {Task? (
             
-            <div style={{
+            <div 
+            className="w3-animate-zoom"  
+            style={{
                 position: 'fixed',
                 width: '99vw',
                 height: '67vh',
@@ -197,7 +203,9 @@ export default function DashSide() {
 
         {Profile? (
             
-            <div style={{
+            <div
+            className="w3-animate-zoom"  
+             style={{
                 position: 'fixed',
                 width: '85vw',
                 height: '62vh',
@@ -228,7 +236,9 @@ export default function DashSide() {
 
         {dock ? (
             
-        <div style={{
+        <div 
+        className="w3-animate-zoom"  
+        style={{
             position: 'fixed',
             width: '85vw',
             height: '30vh',

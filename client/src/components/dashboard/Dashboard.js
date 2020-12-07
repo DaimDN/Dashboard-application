@@ -38,7 +38,7 @@ const Dashboard = ({
       <div className="col-3">
       <div style={{marginTop: '-20px'}}> 
      <h4 
-     style={{fontSize: '38px', fontWeight: '500', fontFamily: 'Ubuntu, sans-serif'}}
+     style={{fontSize: '38px', fontWeight: '400', fontFamily: 'Ubuntu, sans-serif', color: '#503629'}}
       className=""> <Clock format={"h:mm:ss a"} ticking={true} timezone={'Europe/Belfast'} /> </h4>
       </div>
       </div>
@@ -47,7 +47,7 @@ const Dashboard = ({
      
      
           </h2>
-          <h4> 
+          <h4 > 
           <Clock format={"dddd, MMMM Do YYYY"} ticking={true} timezone={'Europe/Belfast'} /> </h4>
     <Sidebar />
     <br/>

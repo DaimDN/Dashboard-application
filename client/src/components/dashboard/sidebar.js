@@ -8,7 +8,7 @@ export default function Sidebar() {
         <br/>
             <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
-          <li class="active x xactive ">
+          <li class="active x xactive ndelta ">
             <a href="./dashboard.html">
               <i style={{fontSize: '21px', color: '#2A3EB1'}} class="now-ui-icons design_app"></i>
               <p className="d">Desk</p>

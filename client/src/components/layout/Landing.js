@@ -17,7 +17,7 @@ const Landing = ({ isAuthenticated }) => {
         <div className="row">
           <div className="col-7">
           <div style={{marginTop: '16vh'}}>
-          <img style={{width: '80%'}} src="https://www.jpmorgan.com/content/dam/shared/logos/logos-cb-jpm.svg"
+          <img style={{width: '70%'}} src="https://www.jpmorgan.com/content/dam/shared/logos/logos-cb-jpm.svg"
       alt="" />
      
          

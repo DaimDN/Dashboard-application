@@ -1,6 +1,6 @@
 # JP Morgan Dashboard System 
 #### This application is made for JP Morgan 
-## <img style="width: 200px;" src="https://www.jpmorgan.com/content/dam/shared/logos/logos-cb-jpm.svg" />
+
 
 
 
